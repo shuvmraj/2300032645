@@ -1,12 +1,11 @@
-class LoggerMiddleware (stack, level, package) {
-    constructor(stack, level, package) {
-        this.stack = stack;
+class LoggerMiddleware {
+    constructor(level = 'INFO') {
         this.level = level;
-        this.package = package;
     }
 
-    log() {
-        console.log(`[${this.level}] [${this.package}] ${this.message}`);
-
+    log(message) {
+        console.log(`[${this.level}] ${message}`);
     }
 }
+
+module.exports = LoggerMiddleware;
