@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const API_BASE = process.env.API_BASE || 'http://20.244.56.144/evaluation-service';
+const API_BASE = process.env.API_BASE ||'http://20.244.56.144/evaluation-service';
 const TOKEN = process.env.TOKEN;
 
 const headers = {
@@ -8,12 +8,12 @@ const headers = {
 };
 
 async function fetchDepots() {
-  const response = await axios.get(`${API_BASE}/depots`, { headers, timeout: 5000 });
+  const response = await axios.get(`${API_BASE}/depots`,{ headers,timeout:5000 });
   return response.data.depots;
 }
 
 async function fetchVehicles() {
-  const response = await axios.get(`${API_BASE}/vehicles`, { headers, timeout: 5000 });
+  constresponse = await axios.get(`${API_BASE}/vehicles`,{headers,timeout: 5000 });
   return response.data.vehicles;
 }
 
@@ -76,7 +76,7 @@ async function run() {
       scheduleDepot(depot, vehicles);
     });
   } catch (err) {
-    console.log('API Error:', err.message);
+    console.log('API Error:',err.message);
   }
 }
 
