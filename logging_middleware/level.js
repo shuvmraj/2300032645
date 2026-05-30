@@ -1,0 +1,8 @@
+{
+    debug,
+    info,
+    warn,
+    error,
+    fatal
+    
+}
